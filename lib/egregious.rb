@@ -38,7 +38,7 @@ module Egregious
 
     if defined?(ActionController)
       exception_codes.merge!({
-                               AbstractController::ActionNotFound=>status_code(:bad_request),
+                               ::AbstractController::ActionNotFound=>status_code(:bad_request),
                                ActionController::InvalidAuthenticityToken=>status_code(:bad_request),
                                ActionController::MethodNotAllowed=>status_code(:not_allowed),
                                ActionController::MissingFile=>status_code(:not_found),
